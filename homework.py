@@ -93,8 +93,9 @@ def test_readable_function():
 def print_func_name_args(func, *args):
     func_normalize = func.__name__.replace('_', ' ').title()
     args_list = list(args)
-    return f'{func_normalize} {args_list}'.replace("'", "")
-
+    result_str = f'{func_normalize} {args_list}'.replace("'", "")
+    print(f"\n{result_str}")
+    return result_str
 
 def open_browser(browser_name):
     actual_result = print_func_name_args(open_browser, browser_name)
